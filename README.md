@@ -49,6 +49,7 @@ In order to do a thorough testing, the following logic was used to verify:
 - Taking 3 inputs and then running the function twice for eg add((add(x, y)), z should be equivalent irrespective of the sequence of addition 
 - Verify whether adding 2 inputs with second one being made negative is equivalent to doing the subtract function for the same inputs
 
+![App Screenshot](https://github.com/i01001/CAREX_Echidna_Workshop/blob/main/Pictures/Add.png)
 
 ### Neg / Inv / Abs 
 - Neg - verifies whether the negative of all values exist except for MIN
@@ -67,6 +68,7 @@ In order to do a thorough testing, the following logic was used to verify:
 - Verifying ((pow(div(x, y), z) == div(pow(x, z), pow(y, z)
 - Verifying (div(pow(x, y), pow(x, z)) == pow(x,sub(y,z))
 
+![App Screenshot](https://github.com/i01001/CAREX_Echidna_Workshop/blob/main/Pictures/Squarerot.png)
 
 ### Exponential / Log 
 - Checks the log and Exponential for different values with special attention to values of significance 
@@ -75,6 +77,12 @@ In order to do a thorough testing, the following logic was used to verify:
 - Verifies log_2(pow(x, y)) == mul(log_2(x), (y))
 - Verifies pow(2, log_2(x))) == x)
 - Verifies (log_2(x) == log_2(y)) when inputs have the same value
+
+
+![App Screenshot](https://github.com/i01001/CAREX_Echidna_Workshop/blob/main/Pictures/Exponential.png)
+
+
+![App Screenshot](https://github.com/i01001/CAREX_Echidna_Workshop/blob/main/Pictures/Log.png)
 
 
 ### Div / Divu / Divi / Mul / Muli / Mulu
