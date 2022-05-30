@@ -100,7 +100,7 @@ Go to the project directory
 To run tests, run the following command after cloning the repository. Changes can be done to config file as required
 
 ```bash
-  ./echidna-test EchidnaTest.sol --contract Test --config config.yaml --seq-len 1
+  ./echidna-test Echidna-CAREX.sol --contract Test --config config.yaml --seq-len 1
 ```
 
 
