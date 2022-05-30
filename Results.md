@@ -1,3 +1,21 @@
+
+# Echidna Test Results 
+
+
+
+## Config settings used
+
+```javascript
+testLimit: 50000
+testMode: assertion
+corpusDir: "corpus-magic"
+```
+
+
+## Echidna Results
+
+
+```bash
 gitpod /workspace/Echidna-Testing (main) $ ./echidna-test EchidnaTest.sol --contract Test --config config.yaml --seq-len 1
 Loaded total of 0 transactions from corpus-magic/coverage
 Analyzing contract: /workspace/Echidna-Testing/EchidnaTest.sol:Test
@@ -259,3 +277,5 @@ Unique instructions: 34700
 Unique codehashes: 1
 Corpus size: 495
 Seed: -2962161396586965879
+```
+    
