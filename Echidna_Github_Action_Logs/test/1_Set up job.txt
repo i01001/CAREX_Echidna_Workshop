@@ -1,0 +1,36 @@
+2022-05-30T19:18:34.9766381Z Current runner version: '2.291.1'
+2022-05-30T19:18:34.9801940Z ##[group]Operating System
+2022-05-30T19:18:34.9803068Z Ubuntu
+2022-05-30T19:18:34.9803427Z 20.04.4
+2022-05-30T19:18:34.9803853Z LTS
+2022-05-30T19:18:34.9804304Z ##[endgroup]
+2022-05-30T19:18:34.9804868Z ##[group]Virtual Environment
+2022-05-30T19:18:34.9805558Z Environment: ubuntu-20.04
+2022-05-30T19:18:34.9805949Z Version: 20220515.1
+2022-05-30T19:18:34.9806827Z Included Software: https://github.com/actions/virtual-environments/blob/ubuntu20/20220515.1/images/linux/Ubuntu2004-Readme.md
+2022-05-30T19:18:34.9807943Z Image Release: https://github.com/actions/virtual-environments/releases/tag/ubuntu20%2F20220515.1
+2022-05-30T19:18:34.9808605Z ##[endgroup]
+2022-05-30T19:18:34.9809164Z ##[group]Virtual Environment Provisioner
+2022-05-30T19:18:34.9809576Z 1.0.0.0-main-20220516-1
+2022-05-30T19:18:34.9809866Z ##[endgroup]
+2022-05-30T19:18:34.9811087Z ##[group]GITHUB_TOKEN Permissions
+2022-05-30T19:18:34.9811756Z Actions: write
+2022-05-30T19:18:34.9812278Z Checks: write
+2022-05-30T19:18:34.9812856Z Contents: write
+2022-05-30T19:18:34.9813189Z Deployments: write
+2022-05-30T19:18:34.9813477Z Discussions: write
+2022-05-30T19:18:34.9813808Z Issues: write
+2022-05-30T19:18:34.9814159Z Metadata: read
+2022-05-30T19:18:34.9814436Z Packages: write
+2022-05-30T19:18:34.9814756Z Pages: write
+2022-05-30T19:18:34.9815107Z PullRequests: write
+2022-05-30T19:18:34.9815418Z RepositoryProjects: write
+2022-05-30T19:18:34.9815817Z SecurityEvents: write
+2022-05-30T19:18:34.9816158Z Statuses: write
+2022-05-30T19:18:34.9816431Z ##[endgroup]
+2022-05-30T19:18:34.9821158Z Secret source: Actions
+2022-05-30T19:18:34.9821742Z Prepare workflow directory
+2022-05-30T19:18:35.0879553Z Prepare all required actions
+2022-05-30T19:18:35.1100544Z Getting action download info
+2022-05-30T19:18:35.3307860Z Download action repository 'actions/checkout@v2' (SHA:7884fcad6b5d53d10323aee724dc68d8b9096a2e)
+2022-05-30T19:18:36.0439593Z Download action repository 'crytic/echidna-action@v1' (SHA:8a4d81decb587677d9d66efec77344eb8dd8f7a9)

@@ -1,0 +1,803 @@
+2022-05-30T19:18:26.8221777Z Requested labels: ubuntu-latest
+2022-05-30T19:18:26.8221816Z Job defined at: i01001/EchidnaTEST2/.github/workflows/action.yml@refs/heads/master
+2022-05-30T19:18:26.8221838Z Waiting for a runner to pick up this job...
+2022-05-30T19:18:28.6032227Z Job is waiting for a hosted runner to come online.
+2022-05-30T19:18:30.5857172Z Job is about to start running on the hosted runner: Hosted Agent (hosted)
+2022-05-30T19:18:34.9766780Z Current runner version: '2.291.1'
+2022-05-30T19:18:34.9801964Z ##[group]Operating System
+2022-05-30T19:18:34.9803078Z Ubuntu
+2022-05-30T19:18:34.9803431Z 20.04.4
+2022-05-30T19:18:34.9803857Z LTS
+2022-05-30T19:18:34.9804310Z ##[endgroup]
+2022-05-30T19:18:34.9804872Z ##[group]Virtual Environment
+2022-05-30T19:18:34.9805563Z Environment: ubuntu-20.04
+2022-05-30T19:18:34.9805953Z Version: 20220515.1
+2022-05-30T19:18:34.9806832Z Included Software: https://github.com/actions/virtual-environments/blob/ubuntu20/20220515.1/images/linux/Ubuntu2004-Readme.md
+2022-05-30T19:18:34.9808004Z Image Release: https://github.com/actions/virtual-environments/releases/tag/ubuntu20%2F20220515.1
+2022-05-30T19:18:34.9808609Z ##[endgroup]
+2022-05-30T19:18:34.9809168Z ##[group]Virtual Environment Provisioner
+2022-05-30T19:18:34.9809579Z 1.0.0.0-main-20220516-1
+2022-05-30T19:18:34.9809869Z ##[endgroup]
+2022-05-30T19:18:34.9811092Z ##[group]GITHUB_TOKEN Permissions
+2022-05-30T19:18:34.9811765Z Actions: write
+2022-05-30T19:18:34.9812446Z Checks: write
+2022-05-30T19:18:34.9812861Z Contents: write
+2022-05-30T19:18:34.9813193Z Deployments: write
+2022-05-30T19:18:34.9813480Z Discussions: write
+2022-05-30T19:18:34.9813812Z Issues: write
+2022-05-30T19:18:34.9814163Z Metadata: read
+2022-05-30T19:18:34.9814440Z Packages: write
+2022-05-30T19:18:34.9814759Z Pages: write
+2022-05-30T19:18:34.9815111Z PullRequests: write
+2022-05-30T19:18:34.9815470Z RepositoryProjects: write
+2022-05-30T19:18:34.9815821Z SecurityEvents: write
+2022-05-30T19:18:34.9816161Z Statuses: write
+2022-05-30T19:18:34.9816496Z ##[endgroup]
+2022-05-30T19:18:34.9821178Z Secret source: Actions
+2022-05-30T19:18:34.9821748Z Prepare workflow directory
+2022-05-30T19:18:35.0879577Z Prepare all required actions
+2022-05-30T19:18:35.1100575Z Getting action download info
+2022-05-30T19:18:35.3307894Z Download action repository 'actions/checkout@v2' (SHA:7884fcad6b5d53d10323aee724dc68d8b9096a2e)
+2022-05-30T19:18:36.0439640Z Download action repository 'crytic/echidna-action@v1' (SHA:8a4d81decb587677d9d66efec77344eb8dd8f7a9)
+2022-05-30T19:18:36.6931720Z ##[group]Build container for action use: '/home/runner/work/_actions/crytic/echidna-action/v1/Dockerfile'.
+2022-05-30T19:18:36.7017266Z ##[command]/usr/bin/docker build -t 08450d:f67997e5d16a410fbd2c326d363bbbe5 -f "/home/runner/work/_actions/crytic/echidna-action/v1/Dockerfile" "/home/runner/work/_actions/crytic/echidna-action/v1"
+2022-05-30T19:18:37.0139363Z Sending build context to Docker daemon  45.57kB
+2022-05-30T19:18:37.0139676Z 
+2022-05-30T19:18:37.0938530Z Step 1/5 : FROM trailofbits/echidna
+2022-05-30T19:18:37.9161216Z latest: Pulling from trailofbits/echidna
+2022-05-30T19:18:37.9175325Z 40dd5be53814: Already exists
+2022-05-30T19:18:37.9224905Z 25431f339957: Pulling fs layer
+2022-05-30T19:18:37.9227167Z 3e3a97aa9f12: Pulling fs layer
+2022-05-30T19:18:37.9231608Z a241154f4980: Pulling fs layer
+2022-05-30T19:18:37.9238147Z e988e27a2c7c: Pulling fs layer
+2022-05-30T19:18:37.9238650Z 8eae24a292bb: Pulling fs layer
+2022-05-30T19:18:37.9238972Z 77fe46141b93: Pulling fs layer
+2022-05-30T19:18:37.9239763Z 2df8e57d36fa: Pulling fs layer
+2022-05-30T19:18:37.9240300Z ab486d97e0c8: Pulling fs layer
+2022-05-30T19:18:37.9241075Z e988e27a2c7c: Waiting
+2022-05-30T19:18:37.9241484Z 8eae24a292bb: Waiting
+2022-05-30T19:18:37.9241750Z 77fe46141b93: Waiting
+2022-05-30T19:18:37.9242223Z 2df8e57d36fa: Waiting
+2022-05-30T19:18:37.9243053Z ab486d97e0c8: Waiting
+2022-05-30T19:18:38.1434470Z 3e3a97aa9f12: Verifying Checksum
+2022-05-30T19:18:38.1435151Z 3e3a97aa9f12: Download complete
+2022-05-30T19:18:38.2789167Z 25431f339957: Verifying Checksum
+2022-05-30T19:18:38.2789659Z 25431f339957: Download complete
+2022-05-30T19:18:38.3908381Z e988e27a2c7c: Verifying Checksum
+2022-05-30T19:18:38.3921843Z e988e27a2c7c: Download complete
+2022-05-30T19:18:38.5695055Z 8eae24a292bb: Verifying Checksum
+2022-05-30T19:18:38.5703799Z 8eae24a292bb: Download complete
+2022-05-30T19:18:38.6907446Z 77fe46141b93: Verifying Checksum
+2022-05-30T19:18:38.6908658Z 77fe46141b93: Download complete
+2022-05-30T19:18:38.9218933Z 2df8e57d36fa: Verifying Checksum
+2022-05-30T19:18:38.9232813Z 2df8e57d36fa: Download complete
+2022-05-30T19:18:38.9967556Z ab486d97e0c8: Verifying Checksum
+2022-05-30T19:18:38.9968209Z ab486d97e0c8: Download complete
+2022-05-30T19:18:39.7403451Z 25431f339957: Pull complete
+2022-05-30T19:18:39.9418941Z 3e3a97aa9f12: Pull complete
+2022-05-30T19:18:42.8417461Z a241154f4980: Verifying Checksum
+2022-05-30T19:18:42.8418637Z a241154f4980: Download complete
+2022-05-30T19:18:53.1313125Z a241154f4980: Pull complete
+2022-05-30T19:18:53.2041354Z e988e27a2c7c: Pull complete
+2022-05-30T19:18:53.3478476Z 8eae24a292bb: Pull complete
+2022-05-30T19:18:53.5035387Z 77fe46141b93: Pull complete
+2022-05-30T19:18:53.9185467Z 2df8e57d36fa: Pull complete
+2022-05-30T19:18:54.0468457Z ab486d97e0c8: Pull complete
+2022-05-30T19:18:54.0538957Z Digest: sha256:7901e20c4fa72df4afce5e467f8926d42770588e79da7ecb01b2f05cb44bb35f
+2022-05-30T19:18:54.0572813Z Status: Downloaded newer image for trailofbits/echidna:latest
+2022-05-30T19:18:54.0593383Z  ---> 691250b23de9
+2022-05-30T19:18:54.0593766Z Step 2/5 : RUN pip3 install solc-select
+2022-05-30T19:18:54.0979073Z  ---> Running in 4eb87801cdae
+2022-05-30T19:18:55.6383334Z Collecting solc-select
+2022-05-30T19:18:55.8317988Z   Downloading https://files.pythonhosted.org/packages/97/1c/0d8b9de658943abb549fff2256fd5f64a7d459799230f84afc9a6ae65ae1/solc_select-0.2.1-py3-none-any.whl
+2022-05-30T19:18:55.8446651Z Installing collected packages: solc-select
+2022-05-30T19:18:55.8550698Z Successfully installed solc-select-0.2.1
+2022-05-30T19:18:57.5918226Z Removing intermediate container 4eb87801cdae
+2022-05-30T19:18:57.5918626Z  ---> 22c2a1f229fc
+2022-05-30T19:18:57.5919249Z Step 3/5 : COPY entrypoint.sh /entrypoint.sh
+2022-05-30T19:18:58.6490388Z  ---> bb9f9812136d
+2022-05-30T19:18:58.6490951Z Step 4/5 : RUN chmod ugo+x /entrypoint.sh
+2022-05-30T19:18:58.6751958Z  ---> Running in 123a3adf13e7
+2022-05-30T19:19:00.1622510Z Removing intermediate container 123a3adf13e7
+2022-05-30T19:19:00.1623148Z  ---> a96927144f36
+2022-05-30T19:19:00.1623925Z Step 5/5 : ENTRYPOINT ["/entrypoint.sh"]
+2022-05-30T19:19:00.1927310Z  ---> Running in 9e3230b44ddd
+2022-05-30T19:19:01.2118675Z Removing intermediate container 9e3230b44ddd
+2022-05-30T19:19:01.2119076Z  ---> a7adc2d30ad8
+2022-05-30T19:19:01.2157355Z Successfully built a7adc2d30ad8
+2022-05-30T19:19:01.2181456Z Successfully tagged 08450d:f67997e5d16a410fbd2c326d363bbbe5
+2022-05-30T19:19:01.2221380Z ##[endgroup]
+2022-05-30T19:19:01.2930899Z ##[group]Run actions/checkout@v2
+2022-05-30T19:19:01.2931203Z with:
+2022-05-30T19:19:01.2931408Z   repository: i01001/EchidnaTEST2
+2022-05-30T19:19:01.2932839Z   token: ***
+2022-05-30T19:19:01.2933468Z   ssh-strict: true
+2022-05-30T19:19:01.2933731Z   persist-credentials: true
+2022-05-30T19:19:01.2933991Z   clean: true
+2022-05-30T19:19:01.2934216Z   fetch-depth: 1
+2022-05-30T19:19:01.2934430Z   lfs: false
+2022-05-30T19:19:01.2934657Z   submodules: false
+2022-05-30T19:19:01.2934916Z   set-safe-directory: true
+2022-05-30T19:19:01.2935187Z ##[endgroup]
+2022-05-30T19:19:01.6617152Z Syncing repository: i01001/EchidnaTEST2
+2022-05-30T19:19:01.6619620Z ##[group]Getting Git version info
+2022-05-30T19:19:01.6620408Z Working directory is '/home/runner/work/EchidnaTEST2/EchidnaTEST2'
+2022-05-30T19:19:01.6621501Z [command]/usr/bin/git version
+2022-05-30T19:19:01.6803581Z git version 2.36.1
+2022-05-30T19:19:01.6805413Z ##[endgroup]
+2022-05-30T19:19:01.6824142Z Temporarily overriding HOME='/home/runner/work/_temp/f7e762d0-1572-4565-a27a-7a1d8a6bd07d' before making global git config changes
+2022-05-30T19:19:01.6824810Z Adding repository directory to the temporary git global config as a safe directory
+2022-05-30T19:19:01.6827782Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/EchidnaTEST2/EchidnaTEST2
+2022-05-30T19:19:01.6872020Z Deleting the contents of '/home/runner/work/EchidnaTEST2/EchidnaTEST2'
+2022-05-30T19:19:01.6878297Z ##[group]Initializing the repository
+2022-05-30T19:19:01.6887604Z [command]/usr/bin/git init /home/runner/work/EchidnaTEST2/EchidnaTEST2
+2022-05-30T19:19:01.7011198Z hint: Using 'master' as the name for the initial branch. This default branch name
+2022-05-30T19:19:01.7011932Z hint: is subject to change. To configure the initial branch name to use in all
+2022-05-30T19:19:01.7012619Z hint: of your new repositories, which will suppress this warning, call:
+2022-05-30T19:19:01.7013222Z hint: 
+2022-05-30T19:19:01.7013901Z hint: 	git config --global init.defaultBranch <name>
+2022-05-30T19:19:01.7014291Z hint: 
+2022-05-30T19:19:01.7014774Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2022-05-30T19:19:01.7015408Z hint: 'development'. The just-created branch can be renamed via this command:
+2022-05-30T19:19:01.7015846Z hint: 
+2022-05-30T19:19:01.7016550Z hint: 	git branch -m <name>
+2022-05-30T19:19:01.7040414Z Initialized empty Git repository in /home/runner/work/EchidnaTEST2/EchidnaTEST2/.git/
+2022-05-30T19:19:01.7054858Z [command]/usr/bin/git remote add origin https://github.com/i01001/EchidnaTEST2
+2022-05-30T19:19:01.7114249Z ##[endgroup]
+2022-05-30T19:19:01.7114778Z ##[group]Disabling automatic garbage collection
+2022-05-30T19:19:01.7180352Z [command]/usr/bin/git config --local gc.auto 0
+2022-05-30T19:19:01.7224751Z ##[endgroup]
+2022-05-30T19:19:01.7225156Z ##[group]Setting up auth
+2022-05-30T19:19:01.7236726Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2022-05-30T19:19:01.7275370Z [command]/usr/bin/git submodule foreach --recursive git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :
+2022-05-30T19:19:01.7749412Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2022-05-30T19:19:01.7794356Z [command]/usr/bin/git submodule foreach --recursive git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :
+2022-05-30T19:19:01.8148820Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2022-05-30T19:19:01.8234867Z ##[endgroup]
+2022-05-30T19:19:01.8235277Z ##[group]Fetching the repository
+2022-05-30T19:19:01.8236237Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +35c0c981d35bdb8beda86fa6f2d94b801a2329c5:refs/remotes/origin/master
+2022-05-30T19:19:02.2717115Z remote: Enumerating objects: 220, done.        
+2022-05-30T19:19:02.2718126Z remote: Counting objects:   0% (1/220)        
+2022-05-30T19:19:02.2718957Z remote: Counting objects:   1% (3/220)        
+2022-05-30T19:19:02.2720051Z remote: Counting objects:   2% (5/220)        
+2022-05-30T19:19:02.2720744Z remote: Counting objects:   3% (7/220)        
+2022-05-30T19:19:02.2721299Z remote: Counting objects:   4% (9/220)        
+2022-05-30T19:19:02.2721704Z remote: Counting objects:   5% (11/220)        
+2022-05-30T19:19:02.2722555Z remote: Counting objects:   6% (14/220)        
+2022-05-30T19:19:02.2722978Z remote: Counting objects:   7% (16/220)        
+2022-05-30T19:19:02.2723320Z remote: Counting objects:   8% (18/220)        
+2022-05-30T19:19:02.2723837Z remote: Counting objects:   9% (20/220)        
+2022-05-30T19:19:02.2724179Z remote: Counting objects:  10% (22/220)        
+2022-05-30T19:19:02.2724524Z remote: Counting objects:  11% (25/220)        
+2022-05-30T19:19:02.2725182Z remote: Counting objects:  12% (27/220)        
+2022-05-30T19:19:02.2725486Z remote: Counting objects:  13% (29/220)        
+2022-05-30T19:19:02.2725739Z remote: Counting objects:  14% (31/220)        
+2022-05-30T19:19:02.2726006Z remote: Counting objects:  15% (33/220)        
+2022-05-30T19:19:02.2726394Z remote: Counting objects:  16% (36/220)        
+2022-05-30T19:19:02.2726716Z remote: Counting objects:  17% (38/220)        
+2022-05-30T19:19:02.2726982Z remote: Counting objects:  18% (40/220)        
+2022-05-30T19:19:02.2727220Z remote: Counting objects:  19% (42/220)        
+2022-05-30T19:19:02.2727733Z remote: Counting objects:  20% (44/220)        
+2022-05-30T19:19:02.2727994Z remote: Counting objects:  21% (47/220)        
+2022-05-30T19:19:02.2728239Z remote: Counting objects:  22% (49/220)        
+2022-05-30T19:19:02.2728498Z remote: Counting objects:  23% (51/220)        
+2022-05-30T19:19:02.2728785Z remote: Counting objects:  24% (53/220)        
+2022-05-30T19:19:02.2729024Z remote: Counting objects:  25% (55/220)        
+2022-05-30T19:19:02.2729283Z remote: Counting objects:  26% (58/220)        
+2022-05-30T19:19:02.2729540Z remote: Counting objects:  27% (60/220)        
+2022-05-30T19:19:02.2729780Z remote: Counting objects:  28% (62/220)        
+2022-05-30T19:19:02.2730036Z remote: Counting objects:  29% (64/220)        
+2022-05-30T19:19:02.2730292Z remote: Counting objects:  30% (66/220)        
+2022-05-30T19:19:02.2730546Z remote: Counting objects:  31% (69/220)        
+2022-05-30T19:19:02.2730783Z remote: Counting objects:  32% (71/220)        
+2022-05-30T19:19:02.2731035Z remote: Counting objects:  33% (73/220)        
+2022-05-30T19:19:02.2731300Z remote: Counting objects:  34% (75/220)        
+2022-05-30T19:19:02.2731540Z remote: Counting objects:  35% (77/220)        
+2022-05-30T19:19:02.2731794Z remote: Counting objects:  36% (80/220)        
+2022-05-30T19:19:02.2732048Z remote: Counting objects:  37% (82/220)        
+2022-05-30T19:19:02.2732289Z remote: Counting objects:  38% (84/220)        
+2022-05-30T19:19:02.2732545Z remote: Counting objects:  39% (86/220)        
+2022-05-30T19:19:02.2732805Z remote: Counting objects:  40% (88/220)        
+2022-05-30T19:19:02.2733042Z remote: Counting objects:  41% (91/220)        
+2022-05-30T19:19:02.2733297Z remote: Counting objects:  42% (93/220)        
+2022-05-30T19:19:02.2733549Z remote: Counting objects:  43% (95/220)        
+2022-05-30T19:19:02.2733970Z remote: Counting objects:  44% (97/220)        
+2022-05-30T19:19:02.2734219Z remote: Counting objects:  45% (99/220)        
+2022-05-30T19:19:02.2734487Z remote: Counting objects:  46% (102/220)        
+2022-05-30T19:19:02.2734763Z remote: Counting objects:  47% (104/220)        
+2022-05-30T19:19:02.2735018Z remote: Counting objects:  48% (106/220)        
+2022-05-30T19:19:02.2735275Z remote: Counting objects:  49% (108/220)        
+2022-05-30T19:19:02.2735551Z remote: Counting objects:  50% (110/220)        
+2022-05-30T19:19:02.2735804Z remote: Counting objects:  51% (113/220)        
+2022-05-30T19:19:02.2736196Z remote: Counting objects:  52% (115/220)        
+2022-05-30T19:19:02.2736816Z remote: Counting objects:  53% (117/220)        
+2022-05-30T19:19:02.2737086Z remote: Counting objects:  54% (119/220)        
+2022-05-30T19:19:02.2737336Z remote: Counting objects:  55% (121/220)        
+2022-05-30T19:19:02.2737603Z remote: Counting objects:  56% (124/220)        
+2022-05-30T19:19:02.2737868Z remote: Counting objects:  57% (126/220)        
+2022-05-30T19:19:02.2738119Z remote: Counting objects:  58% (128/220)        
+2022-05-30T19:19:02.2738381Z remote: Counting objects:  59% (130/220)        
+2022-05-30T19:19:02.2738648Z remote: Counting objects:  60% (132/220)        
+2022-05-30T19:19:02.2738894Z remote: Counting objects:  61% (135/220)        
+2022-05-30T19:19:02.2739154Z remote: Counting objects:  62% (137/220)        
+2022-05-30T19:19:02.2739416Z remote: Counting objects:  63% (139/220)        
+2022-05-30T19:19:02.2739877Z remote: Counting objects:  64% (141/220)        
+2022-05-30T19:19:02.2740142Z remote: Counting objects:  65% (143/220)        
+2022-05-30T19:19:02.2740413Z remote: Counting objects:  66% (146/220)        
+2022-05-30T19:19:02.2740685Z remote: Counting objects:  67% (148/220)        
+2022-05-30T19:19:02.2740957Z remote: Counting objects:  68% (150/220)        
+2022-05-30T19:19:02.2741211Z remote: Counting objects:  69% (152/220)        
+2022-05-30T19:19:02.2741480Z remote: Counting objects:  70% (154/220)        
+2022-05-30T19:19:02.2741751Z remote: Counting objects:  71% (157/220)        
+2022-05-30T19:19:02.2742247Z remote: Counting objects:  72% (159/220)        
+2022-05-30T19:19:02.2742613Z remote: Counting objects:  73% (161/220)        
+2022-05-30T19:19:02.2742880Z remote: Counting objects:  74% (163/220)        
+2022-05-30T19:19:02.2743130Z remote: Counting objects:  75% (165/220)        
+2022-05-30T19:19:02.2743390Z remote: Counting objects:  76% (168/220)        
+2022-05-30T19:19:02.2743655Z remote: Counting objects:  77% (170/220)        
+2022-05-30T19:19:02.2743902Z remote: Counting objects:  78% (172/220)        
+2022-05-30T19:19:02.2744319Z remote: Counting objects:  79% (174/220)        
+2022-05-30T19:19:02.2744578Z remote: Counting objects:  80% (176/220)        
+2022-05-30T19:19:02.2744833Z remote: Counting objects:  81% (179/220)        
+2022-05-30T19:19:02.2745069Z remote: Counting objects:  82% (181/220)        
+2022-05-30T19:19:02.2745322Z remote: Counting objects:  83% (183/220)        
+2022-05-30T19:19:02.2745581Z remote: Counting objects:  84% (185/220)        
+2022-05-30T19:19:02.2745821Z remote: Counting objects:  85% (187/220)        
+2022-05-30T19:19:02.2746081Z remote: Counting objects:  86% (190/220)        
+2022-05-30T19:19:02.2746334Z remote: Counting objects:  87% (192/220)        
+2022-05-30T19:19:02.2746572Z remote: Counting objects:  88% (194/220)        
+2022-05-30T19:19:02.2747001Z remote: Counting objects:  89% (196/220)        
+2022-05-30T19:19:02.2747912Z remote: Counting objects:  90% (198/220)        
+2022-05-30T19:19:02.2748167Z remote: Counting objects:  91% (201/220)        
+2022-05-30T19:19:02.2748424Z remote: Counting objects:  92% (203/220)        
+2022-05-30T19:19:02.2748679Z remote: Counting objects:  93% (205/220)        
+2022-05-30T19:19:02.2748936Z remote: Counting objects:  94% (207/220)        
+2022-05-30T19:19:02.2749178Z remote: Counting objects:  95% (209/220)        
+2022-05-30T19:19:02.2749431Z remote: Counting objects:  96% (212/220)        
+2022-05-30T19:19:02.2749689Z remote: Counting objects:  97% (214/220)        
+2022-05-30T19:19:02.2749928Z remote: Counting objects:  98% (216/220)        
+2022-05-30T19:19:02.2750184Z remote: Counting objects:  99% (218/220)        
+2022-05-30T19:19:02.2750440Z remote: Counting objects: 100% (220/220)        
+2022-05-30T19:19:02.2750693Z remote: Counting objects: 100% (220/220), done.        
+2022-05-30T19:19:02.2750983Z remote: Compressing objects:   0% (1/185)        
+2022-05-30T19:19:02.2752884Z remote: Compressing objects:   1% (2/185)        
+2022-05-30T19:19:02.2753606Z remote: Compressing objects:   2% (4/185)        
+2022-05-30T19:19:02.2753954Z remote: Compressing objects:   3% (6/185)        
+2022-05-30T19:19:02.2981145Z remote: Compressing objects:   4% (8/185)        
+2022-05-30T19:19:02.2981490Z remote: Compressing objects:   5% (10/185)        
+2022-05-30T19:19:02.2981780Z remote: Compressing objects:   6% (12/185)        
+2022-05-30T19:19:02.2982255Z remote: Compressing objects:   7% (13/185)        
+2022-05-30T19:19:02.2982567Z remote: Compressing objects:   8% (15/185)        
+2022-05-30T19:19:02.2983062Z remote: Compressing objects:   9% (17/185)        
+2022-05-30T19:19:02.2983374Z remote: Compressing objects:  10% (19/185)        
+2022-05-30T19:19:02.2983691Z remote: Compressing objects:  11% (21/185)        
+2022-05-30T19:19:02.2984203Z remote: Compressing objects:  12% (23/185)        
+2022-05-30T19:19:02.2984490Z remote: Compressing objects:  13% (25/185)        
+2022-05-30T19:19:02.2985104Z remote: Compressing objects:  14% (26/185)        
+2022-05-30T19:19:02.2985394Z remote: Compressing objects:  15% (28/185)        
+2022-05-30T19:19:02.2985844Z remote: Compressing objects:  16% (30/185)        
+2022-05-30T19:19:02.2986301Z remote: Compressing objects:  17% (32/185)        
+2022-05-30T19:19:02.2986581Z remote: Compressing objects:  18% (34/185)        
+2022-05-30T19:19:02.2986844Z remote: Compressing objects:  19% (36/185)        
+2022-05-30T19:19:02.2987346Z remote: Compressing objects:  20% (37/185)        
+2022-05-30T19:19:02.2987636Z remote: Compressing objects:  21% (39/185)        
+2022-05-30T19:19:02.2987931Z remote: Compressing objects:  22% (41/185)        
+2022-05-30T19:19:02.2988444Z remote: Compressing objects:  23% (43/185)        
+2022-05-30T19:19:02.2989002Z remote: Compressing objects:  24% (45/185)        
+2022-05-30T19:19:02.2989304Z remote: Compressing objects:  25% (47/185)        
+2022-05-30T19:19:02.2989615Z remote: Compressing objects:  26% (49/185)        
+2022-05-30T19:19:02.2990103Z remote: Compressing objects:  27% (50/185)        
+2022-05-30T19:19:02.2990426Z remote: Compressing objects:  28% (52/185)        
+2022-05-30T19:19:02.2990879Z remote: Compressing objects:  29% (54/185)        
+2022-05-30T19:19:02.2991360Z remote: Compressing objects:  30% (56/185)        
+2022-05-30T19:19:02.2991671Z remote: Compressing objects:  31% (58/185)        
+2022-05-30T19:19:02.2992327Z remote: Compressing objects:  32% (60/185)        
+2022-05-30T19:19:02.2992912Z remote: Compressing objects:  33% (62/185)        
+2022-05-30T19:19:02.2993213Z remote: Compressing objects:  34% (63/185)        
+2022-05-30T19:19:02.2993516Z remote: Compressing objects:  35% (65/185)        
+2022-05-30T19:19:02.2993807Z remote: Compressing objects:  36% (67/185)        
+2022-05-30T19:19:02.2994282Z remote: Compressing objects:  37% (69/185)        
+2022-05-30T19:19:02.2994594Z remote: Compressing objects:  38% (71/185)        
+2022-05-30T19:19:02.2994888Z remote: Compressing objects:  39% (73/185)        
+2022-05-30T19:19:02.2995201Z remote: Compressing objects:  40% (74/185)        
+2022-05-30T19:19:02.2995515Z remote: Compressing objects:  41% (76/185)        
+2022-05-30T19:19:02.2996616Z remote: Compressing objects:  42% (78/185)        
+2022-05-30T19:19:02.2997175Z remote: Compressing objects:  43% (80/185)        
+2022-05-30T19:19:02.2997732Z remote: Compressing objects:  44% (82/185)        
+2022-05-30T19:19:02.2998288Z remote: Compressing objects:  45% (84/185)        
+2022-05-30T19:19:02.2998759Z remote: Compressing objects:  46% (86/185)        
+2022-05-30T19:19:02.2999053Z remote: Compressing objects:  47% (87/185)        
+2022-05-30T19:19:02.2999347Z remote: Compressing objects:  48% (89/185)        
+2022-05-30T19:19:02.2999629Z remote: Compressing objects:  49% (91/185)        
+2022-05-30T19:19:02.2999921Z remote: Compressing objects:  50% (93/185)        
+2022-05-30T19:19:02.3000214Z remote: Compressing objects:  51% (95/185)        
+2022-05-30T19:19:02.3000488Z remote: Compressing objects:  52% (97/185)        
+2022-05-30T19:19:02.3000784Z remote: Compressing objects:  53% (99/185)        
+2022-05-30T19:19:02.3001232Z remote: Compressing objects:  54% (100/185)        
+2022-05-30T19:19:02.3001545Z remote: Compressing objects:  55% (102/185)        
+2022-05-30T19:19:02.3001849Z remote: Compressing objects:  56% (104/185)        
+2022-05-30T19:19:02.3002151Z remote: Compressing objects:  57% (106/185)        
+2022-05-30T19:19:02.3002656Z remote: Compressing objects:  58% (108/185)        
+2022-05-30T19:19:02.3002942Z remote: Compressing objects:  59% (110/185)        
+2022-05-30T19:19:02.3003237Z remote: Compressing objects:  60% (111/185)        
+2022-05-30T19:19:02.3003540Z remote: Compressing objects:  61% (113/185)        
+2022-05-30T19:19:02.3003818Z remote: Compressing objects:  62% (115/185)        
+2022-05-30T19:19:02.3004113Z remote: Compressing objects:  63% (117/185)        
+2022-05-30T19:19:02.3004409Z remote: Compressing objects:  64% (119/185)        
+2022-05-30T19:19:02.3004686Z remote: Compressing objects:  65% (121/185)        
+2022-05-30T19:19:02.3004984Z remote: Compressing objects:  66% (123/185)        
+2022-05-30T19:19:02.3005275Z remote: Compressing objects:  67% (124/185)        
+2022-05-30T19:19:02.3005550Z remote: Compressing objects:  68% (126/185)        
+2022-05-30T19:19:02.3005842Z remote: Compressing objects:  69% (128/185)        
+2022-05-30T19:19:02.3006131Z remote: Compressing objects:  70% (130/185)        
+2022-05-30T19:19:02.3006421Z remote: Compressing objects:  71% (132/185)        
+2022-05-30T19:19:02.3006697Z remote: Compressing objects:  72% (134/185)        
+2022-05-30T19:19:02.3006989Z remote: Compressing objects:  73% (136/185)        
+2022-05-30T19:19:02.3007419Z remote: Compressing objects:  74% (137/185)        
+2022-05-30T19:19:02.3007697Z remote: Compressing objects:  75% (139/185)        
+2022-05-30T19:19:02.3007991Z remote: Compressing objects:  76% (141/185)        
+2022-05-30T19:19:02.3008285Z remote: Compressing objects:  77% (143/185)        
+2022-05-30T19:19:02.3008745Z remote: Compressing objects:  78% (145/185)        
+2022-05-30T19:19:02.3009031Z remote: Compressing objects:  79% (147/185)        
+2022-05-30T19:19:02.3009313Z remote: Compressing objects:  80% (148/185)        
+2022-05-30T19:19:02.3009595Z remote: Compressing objects:  81% (150/185)        
+2022-05-30T19:19:02.3009859Z remote: Compressing objects:  82% (152/185)        
+2022-05-30T19:19:02.3010140Z remote: Compressing objects:  83% (154/185)        
+2022-05-30T19:19:02.3010604Z remote: Compressing objects:  84% (156/185)        
+2022-05-30T19:19:02.3010880Z remote: Compressing objects:  85% (158/185)        
+2022-05-30T19:19:02.3011170Z remote: Compressing objects:  86% (160/185)        
+2022-05-30T19:19:02.3011646Z remote: Compressing objects:  87% (161/185)        
+2022-05-30T19:19:02.3011932Z remote: Compressing objects:  88% (163/185)        
+2022-05-30T19:19:02.3012389Z remote: Compressing objects:  89% (165/185)        
+2022-05-30T19:19:02.3013042Z remote: Compressing objects:  90% (167/185)        
+2022-05-30T19:19:02.3013521Z remote: Compressing objects:  91% (169/185)        
+2022-05-30T19:19:02.3013827Z remote: Compressing objects:  92% (171/185)        
+2022-05-30T19:19:02.3014114Z remote: Compressing objects:  93% (173/185)        
+2022-05-30T19:19:02.3014672Z remote: Compressing objects:  94% (174/185)        
+2022-05-30T19:19:02.3014971Z remote: Compressing objects:  95% (176/185)        
+2022-05-30T19:19:02.3015267Z remote: Compressing objects:  96% (178/185)        
+2022-05-30T19:19:02.3015542Z remote: Compressing objects:  97% (180/185)        
+2022-05-30T19:19:02.3016000Z remote: Compressing objects:  98% (182/185)        
+2022-05-30T19:19:02.3016287Z remote: Compressing objects:  99% (184/185)        
+2022-05-30T19:19:02.3016554Z remote: Compressing objects: 100% (185/185)        
+2022-05-30T19:19:02.3016854Z remote: Compressing objects: 100% (185/185), done.        
+2022-05-30T19:19:02.3109988Z Receiving objects:   0% (1/220)
+2022-05-30T19:19:02.3110247Z Receiving objects:   1% (3/220)
+2022-05-30T19:19:02.3110493Z Receiving objects:   2% (5/220)
+2022-05-30T19:19:02.3110918Z Receiving objects:   3% (7/220)
+2022-05-30T19:19:02.3111167Z Receiving objects:   4% (9/220)
+2022-05-30T19:19:02.3111415Z Receiving objects:   5% (11/220)
+2022-05-30T19:19:02.3115762Z Receiving objects:   6% (14/220)
+2022-05-30T19:19:02.3116038Z Receiving objects:   7% (16/220)
+2022-05-30T19:19:02.3116289Z Receiving objects:   8% (18/220)
+2022-05-30T19:19:02.3119425Z Receiving objects:   9% (20/220)
+2022-05-30T19:19:02.3305812Z Receiving objects:  10% (22/220)
+2022-05-30T19:19:02.3340488Z Receiving objects:  11% (25/220)
+2022-05-30T19:19:02.3417112Z Receiving objects:  12% (27/220)
+2022-05-30T19:19:02.3417624Z Receiving objects:  13% (29/220)
+2022-05-30T19:19:02.3425442Z Receiving objects:  14% (31/220)
+2022-05-30T19:19:02.3430481Z Receiving objects:  15% (33/220)
+2022-05-30T19:19:02.3652514Z Receiving objects:  16% (36/220)
+2022-05-30T19:19:02.3652994Z Receiving objects:  17% (38/220)
+2022-05-30T19:19:02.3655901Z Receiving objects:  18% (40/220)
+2022-05-30T19:19:02.3658802Z Receiving objects:  19% (42/220)
+2022-05-30T19:19:02.3673581Z Receiving objects:  20% (44/220)
+2022-05-30T19:19:02.3686629Z Receiving objects:  21% (47/220)
+2022-05-30T19:19:02.3689940Z Receiving objects:  22% (49/220)
+2022-05-30T19:19:02.3696223Z Receiving objects:  23% (51/220)
+2022-05-30T19:19:02.3767333Z Receiving objects:  24% (53/220)
+2022-05-30T19:19:02.3769202Z Receiving objects:  25% (55/220)
+2022-05-30T19:19:02.3769819Z Receiving objects:  26% (58/220)
+2022-05-30T19:19:02.3770195Z Receiving objects:  27% (60/220)
+2022-05-30T19:19:02.3806390Z Receiving objects:  28% (62/220)
+2022-05-30T19:19:02.3807008Z Receiving objects:  29% (64/220)
+2022-05-30T19:19:02.3807348Z Receiving objects:  30% (66/220)
+2022-05-30T19:19:02.3807840Z Receiving objects:  31% (69/220)
+2022-05-30T19:19:02.3808187Z Receiving objects:  32% (71/220)
+2022-05-30T19:19:02.3808520Z Receiving objects:  33% (73/220)
+2022-05-30T19:19:02.3808853Z Receiving objects:  34% (75/220)
+2022-05-30T19:19:02.3809175Z Receiving objects:  35% (77/220)
+2022-05-30T19:19:02.3809702Z Receiving objects:  36% (80/220)
+2022-05-30T19:19:02.3810050Z Receiving objects:  37% (82/220)
+2022-05-30T19:19:02.3810380Z Receiving objects:  38% (84/220)
+2022-05-30T19:19:02.3811154Z Receiving objects:  39% (86/220)
+2022-05-30T19:19:02.3811503Z Receiving objects:  40% (88/220)
+2022-05-30T19:19:02.3812024Z Receiving objects:  41% (91/220)
+2022-05-30T19:19:02.3812592Z Receiving objects:  42% (93/220)
+2022-05-30T19:19:02.3813249Z Receiving objects:  43% (95/220)
+2022-05-30T19:19:02.3813595Z Receiving objects:  44% (97/220)
+2022-05-30T19:19:02.3813900Z Receiving objects:  45% (99/220)
+2022-05-30T19:19:02.3814235Z Receiving objects:  46% (102/220)
+2022-05-30T19:19:02.3814979Z remote: Total 220 (delta 10), reused 160 (delta 9), pack-reused 0        
+2022-05-30T19:19:02.3815390Z Receiving objects:  47% (104/220)
+2022-05-30T19:19:02.3815704Z Receiving objects:  48% (106/220)
+2022-05-30T19:19:02.3816028Z Receiving objects:  49% (108/220)
+2022-05-30T19:19:02.3816356Z Receiving objects:  50% (110/220)
+2022-05-30T19:19:02.3816696Z Receiving objects:  51% (113/220)
+2022-05-30T19:19:02.3817010Z Receiving objects:  52% (115/220)
+2022-05-30T19:19:02.3817333Z Receiving objects:  53% (117/220)
+2022-05-30T19:19:02.3817661Z Receiving objects:  54% (119/220)
+2022-05-30T19:19:02.3817972Z Receiving objects:  55% (121/220)
+2022-05-30T19:19:02.3818301Z Receiving objects:  56% (124/220)
+2022-05-30T19:19:02.3818622Z Receiving objects:  57% (126/220)
+2022-05-30T19:19:02.3818948Z Receiving objects:  58% (128/220)
+2022-05-30T19:19:02.3819253Z Receiving objects:  59% (130/220)
+2022-05-30T19:19:02.3819581Z Receiving objects:  60% (132/220)
+2022-05-30T19:19:02.3819954Z Receiving objects:  61% (135/220)
+2022-05-30T19:19:02.3820282Z Receiving objects:  62% (137/220)
+2022-05-30T19:19:02.3823102Z Receiving objects:  63% (139/220)
+2022-05-30T19:19:02.3823656Z Receiving objects:  64% (141/220)
+2022-05-30T19:19:02.3825590Z Receiving objects:  65% (143/220)
+2022-05-30T19:19:02.3840042Z Receiving objects:  66% (146/220)
+2022-05-30T19:19:02.3840623Z Receiving objects:  67% (148/220)
+2022-05-30T19:19:02.3843887Z Receiving objects:  68% (150/220)
+2022-05-30T19:19:02.3844316Z Receiving objects:  69% (152/220)
+2022-05-30T19:19:02.3846253Z Receiving objects:  70% (154/220)
+2022-05-30T19:19:02.3846664Z Receiving objects:  71% (157/220)
+2022-05-30T19:19:02.3848817Z Receiving objects:  72% (159/220)
+2022-05-30T19:19:02.3849212Z Receiving objects:  73% (161/220)
+2022-05-30T19:19:02.3851307Z Receiving objects:  74% (163/220)
+2022-05-30T19:19:02.3851882Z Receiving objects:  75% (165/220)
+2022-05-30T19:19:02.3853839Z Receiving objects:  76% (168/220)
+2022-05-30T19:19:02.3856431Z Receiving objects:  77% (170/220)
+2022-05-30T19:19:02.3856824Z Receiving objects:  78% (172/220)
+2022-05-30T19:19:02.3859259Z Receiving objects:  79% (174/220)
+2022-05-30T19:19:02.3859639Z Receiving objects:  80% (176/220)
+2022-05-30T19:19:02.3859972Z Receiving objects:  81% (179/220)
+2022-05-30T19:19:02.3862539Z Receiving objects:  82% (181/220)
+2022-05-30T19:19:02.3863086Z Receiving objects:  83% (183/220)
+2022-05-30T19:19:02.3863452Z Receiving objects:  84% (185/220)
+2022-05-30T19:19:02.3865502Z Receiving objects:  85% (187/220)
+2022-05-30T19:19:02.3865906Z Receiving objects:  86% (190/220)
+2022-05-30T19:19:02.3867847Z Receiving objects:  87% (192/220)
+2022-05-30T19:19:02.3870894Z Receiving objects:  88% (194/220)
+2022-05-30T19:19:02.3873285Z Receiving objects:  89% (196/220)
+2022-05-30T19:19:02.3875408Z Receiving objects:  90% (198/220)
+2022-05-30T19:19:02.3877695Z Receiving objects:  91% (201/220)
+2022-05-30T19:19:02.3879535Z Receiving objects:  92% (203/220)
+2022-05-30T19:19:02.3880123Z Receiving objects:  93% (205/220)
+2022-05-30T19:19:02.3882301Z Receiving objects:  94% (207/220)
+2022-05-30T19:19:02.3884594Z Receiving objects:  95% (209/220)
+2022-05-30T19:19:02.3886686Z Receiving objects:  96% (212/220)
+2022-05-30T19:19:02.3889853Z Receiving objects:  97% (214/220)
+2022-05-30T19:19:02.3892195Z Receiving objects:  98% (216/220)
+2022-05-30T19:19:02.3892496Z Receiving objects:  99% (218/220)
+2022-05-30T19:19:02.3892767Z Receiving objects: 100% (220/220)
+2022-05-30T19:19:02.3893066Z Receiving objects: 100% (220/220), 174.94 KiB | 2.16 MiB/s, done.
+2022-05-30T19:19:02.3895308Z Resolving deltas:   0% (0/10)
+2022-05-30T19:19:02.3897359Z Resolving deltas:  10% (1/10)
+2022-05-30T19:19:02.3899338Z Resolving deltas:  20% (2/10)
+2022-05-30T19:19:02.3899583Z Resolving deltas:  30% (3/10)
+2022-05-30T19:19:02.3899839Z Resolving deltas:  40% (4/10)
+2022-05-30T19:19:02.3900087Z Resolving deltas:  50% (5/10)
+2022-05-30T19:19:02.3903346Z Resolving deltas:  60% (6/10)
+2022-05-30T19:19:02.3903633Z Resolving deltas:  70% (7/10)
+2022-05-30T19:19:02.3903882Z Resolving deltas:  80% (8/10)
+2022-05-30T19:19:02.3904130Z Resolving deltas:  90% (9/10)
+2022-05-30T19:19:02.3904360Z Resolving deltas: 100% (10/10)
+2022-05-30T19:19:02.3904619Z Resolving deltas: 100% (10/10), done.
+2022-05-30T19:19:02.4006692Z From https://github.com/i01001/EchidnaTEST2
+2022-05-30T19:19:02.4007387Z  * [new ref]         35c0c981d35bdb8beda86fa6f2d94b801a2329c5 -> origin/master
+2022-05-30T19:19:02.4029728Z ##[endgroup]
+2022-05-30T19:19:02.4030176Z ##[group]Determining the checkout info
+2022-05-30T19:19:02.4042027Z ##[endgroup]
+2022-05-30T19:19:02.4042737Z ##[group]Checking out the ref
+2022-05-30T19:19:02.4047129Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2022-05-30T19:19:02.4245321Z Reset branch 'master'
+2022-05-30T19:19:02.4245987Z branch 'master' set up to track 'origin/master'.
+2022-05-30T19:19:02.4255156Z ##[endgroup]
+2022-05-30T19:19:02.4317042Z [command]/usr/bin/git log -1 --format='%H'
+2022-05-30T19:19:02.4366577Z '35c0c981d35bdb8beda86fa6f2d94b801a2329c5'
+2022-05-30T19:19:02.4715924Z ##[group]Run crytic/echidna-action@v1
+2022-05-30T19:19:02.4716184Z with:
+2022-05-30T19:19:02.4716415Z   files: tests/solidity/basic/EchidnaTest.sol
+2022-05-30T19:19:02.4716658Z   contract: Test
+2022-05-30T19:19:02.4716880Z   config: tests/solidity/basic/config.yaml
+2022-05-30T19:19:02.4717277Z   solc-version: 0.8.1
+2022-05-30T19:19:02.4717498Z   negate-exit-status: 1
+2022-05-30T19:19:02.4717688Z ##[endgroup]
+2022-05-30T19:19:02.4952238Z ##[command]/usr/bin/docker run --name df67997e5d16a410fbd2c326d363bbbe5_81ce6c --label 08450d --workdir /github/workspace --rm -e INPUT_FILES -e INPUT_CONTRACT -e INPUT_CONFIG -e INPUT_SOLC-VERSION -e INPUT_NEGATE-EXIT-STATUS -e INPUT_FORMAT -e INPUT_CORPUS-DIR -e INPUT_CHECK-ASSERTS -e INPUT_MULTI-ABI -e INPUT_TEST-LIMIT -e INPUT_SHRINK-LIMIT -e INPUT_SEQ-LEN -e INPUT_CONTRACT-ADDR -e INPUT_DEPLOYER -e INPUT_SENDER -e INPUT_SEED -e INPUT_CRYTIC-ARGS -e INPUT_SOLC-ARGS -e HOME -e GITHUB_JOB -e GITHUB_REF -e GITHUB_SHA -e GITHUB_REPOSITORY -e GITHUB_REPOSITORY_OWNER -e GITHUB_RUN_ID -e GITHUB_RUN_NUMBER -e GITHUB_RETENTION_DAYS -e GITHUB_RUN_ATTEMPT -e GITHUB_ACTOR -e GITHUB_WORKFLOW -e GITHUB_HEAD_REF -e GITHUB_BASE_REF -e GITHUB_EVENT_NAME -e GITHUB_SERVER_URL -e GITHUB_API_URL -e GITHUB_GRAPHQL_URL -e GITHUB_REF_NAME -e GITHUB_REF_PROTECTED -e GITHUB_REF_TYPE -e GITHUB_WORKSPACE -e GITHUB_ACTION -e GITHUB_EVENT_PATH -e GITHUB_ACTION_REPOSITORY -e GITHUB_ACTION_REF -e GITHUB_PATH -e GITHUB_ENV -e GITHUB_STEP_SUMMARY -e RUNNER_OS -e RUNNER_ARCH -e RUNNER_NAME -e RUNNER_TOOL_CACHE -e RUNNER_TEMP -e RUNNER_WORKSPACE -e ACTIONS_RUNTIME_URL -e ACTIONS_RUNTIME_TOKEN -e ACTIONS_CACHE_URL -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" -v "/home/runner/work/_temp/_runner_file_commands":"/github/file_commands" -v "/home/runner/work/EchidnaTEST2/EchidnaTEST2":"/github/workspace" 08450d:f67997e5d16a410fbd2c326d363bbbe5
+2022-05-30T19:19:03.7396417Z Installing '0.8.1'...
+2022-05-30T19:19:03.7396827Z Version '0.8.1' installed.
+2022-05-30T19:19:03.8226005Z Switched global version to 0.8.1
+2022-05-30T19:19:03.8301718Z echidna-test tests/solidity/basic/EchidnaTest.sol --contract Test --config tests/solidity/basic/config.yaml
+2022-05-30T19:53:41.6594856Z Analyzing contract: /github/workspace/tests/solidity/basic/EchidnaTest.sol:Test
+2022-05-30T19:53:41.6604992Z fromInt_check_2(int256):  passed! 🎉
+2022-05-30T19:53:41.6605503Z neg_check_2(int128):  passed! 🎉
+2022-05-30T19:53:41.6605772Z muli_check_8():  passed! 🎉
+2022-05-30T19:53:41.6606250Z abs_check_7(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6606747Z divi_check_16(int256,int256,int256):  passed! 🎉
+2022-05-30T19:53:41.6607202Z div_check_11():  passed! 🎉
+2022-05-30T19:53:41.6607488Z sub_check_4(int128):  passed! 🎉
+2022-05-30T19:53:41.6607763Z div_check_7():  passed! 🎉
+2022-05-30T19:53:41.6608082Z ln_check_6(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6608376Z div_check_14():  passed! 🎉
+2022-05-30T19:53:41.6608677Z abs_check_9(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6608976Z neg_check_12(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6609289Z gavg_check_15(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6609595Z avg_check_9(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6609893Z sqrt_check_4(int128,uint256):  passed! 🎉
+2022-05-30T19:53:41.6610368Z log_2_check_4(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6610821Z mul_check_3():  passed! 🎉
+2022-05-30T19:53:41.6611108Z divu_check_8(uint256):  passed! 🎉
+2022-05-30T19:53:41.6611400Z gavg_check_3(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6612026Z mulu_check_3():  passed! 🎉
+2022-05-30T19:53:41.6612325Z avg_check_3(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6612618Z exp_check_4(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6612932Z pow_check_2(int128,uint256):  passed! 🎉
+2022-05-30T19:53:41.6613224Z divu_check_7():  passed! 🎉
+2022-05-30T19:53:41.6615346Z divi_check_14():  passed! 🎉
+2022-05-30T19:53:41.6615733Z mul_check_5(int128):  passed! 🎉
+2022-05-30T19:53:41.6616026Z neg_check_11(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6616285Z neg_check_9():  passed! 🎉
+2022-05-30T19:53:41.6616578Z gavg_check_11(int128,int128): failed!💥  
+2022-05-30T19:53:41.6616799Z   Call sequence:
+2022-05-30T19:53:41.6616988Z     gavg_check_11(0,4308528460)
+2022-05-30T19:53:41.6617118Z 
+2022-05-30T19:53:41.6617211Z Event sequence: Panic(1)
+2022-05-30T19:53:41.6617478Z divu_check_14():  passed! 🎉
+2022-05-30T19:53:41.6617738Z avg(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6618017Z mulu_check_5(uint256):  passed! 🎉
+2022-05-30T19:53:41.6618304Z divu_check_11(uint256):  passed! 🎉
+2022-05-30T19:53:41.6618589Z avg_check_2(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6618888Z exp_check_5(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6619192Z divi_check_15(int256,int256):  passed! 🎉
+2022-05-30T19:53:41.6619530Z div_check_18(int128,int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6619953Z divi_check_9(int256):  passed! 🎉
+2022-05-30T19:53:41.6620241Z divi_check_13():  passed! 🎉
+2022-05-30T19:53:41.6620518Z mul_check_9(int128):  passed! 🎉
+2022-05-30T19:53:41.6620777Z neg_check_6(int128):  passed! 🎉
+2022-05-30T19:53:41.6621068Z neg_check_4(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6621352Z div(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6621606Z exp_2_check_8():  passed! 🎉
+2022-05-30T19:53:41.6621890Z add_check(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6622188Z exp_check_2(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6622497Z divi_check_17(int256,int256,int256):  passed! 🎉
+2022-05-30T19:53:41.6622786Z mulu_check_7():  passed! 🎉
+2022-05-30T19:53:41.6623082Z log_2_check_5(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6624805Z sub_check_5():  passed! 🎉
+2022-05-30T19:53:41.6625132Z log_2(int128):  passed! 🎉
+2022-05-30T19:53:41.6625842Z divu_check_2():  passed! 🎉
+2022-05-30T19:53:41.6626497Z mul_check_13(int128,int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6626879Z toInt_check_2(int128):  passed! 🎉
+2022-05-30T19:53:41.6627382Z divi_check_12(int256):  passed! 🎉
+2022-05-30T19:53:41.6628249Z inv_check_7(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6628810Z add_check_9(int128,int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6629295Z add(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6629629Z pow_check_6(int128,uint256,uint256):  passed! 🎉
+2022-05-30T19:53:41.6629944Z inv_check_3():  passed! 🎉
+2022-05-30T19:53:41.6630250Z mul_check(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6630576Z exp_check_3(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6630884Z ln_check_5(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6631199Z toUInt_check_2(int128):  passed! 🎉
+2022-05-30T19:53:41.6631512Z sqrt_check_7(int128):  passed! 🎉
+2022-05-30T19:53:41.6632534Z abs_check_8(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6632851Z mul_check_7():  passed! 🎉
+2022-05-30T19:53:41.6633274Z pow_check_5(int128,int128,uint256):  passed! 🎉
+2022-05-30T19:53:41.6633826Z mulu_check_2():  passed! 🎉
+2022-05-30T19:53:41.6634160Z gavg_check_8(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6634736Z div_check_5(int128):  passed! 🎉
+2022-05-30T19:53:41.6635359Z mul_check_12(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6635686Z inv_check_2(int128):  passed! 🎉
+2022-05-30T19:53:41.6636419Z abs_check(int128):  passed! 🎉
+2022-05-30T19:53:41.6636806Z divi_check_10():  passed! 🎉
+2022-05-30T19:53:41.6637185Z neg(int128):  passed! 🎉
+2022-05-30T19:53:41.6637763Z exp_2_check_3(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6638473Z muli_check_3():  passed! 🎉
+2022-05-30T19:53:41.6638786Z ln_check_7(int128):  passed! 🎉
+2022-05-30T19:53:41.6639187Z pow_check(int128,uint256,int128):  passed! 🎉
+2022-05-30T19:53:41.6639627Z exp_2_check(int128):  passed! 🎉
+2022-05-30T19:53:41.6640094Z divi(int256,int256):  passed! 🎉
+2022-05-30T19:53:41.6640487Z div_check_17(int128,int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6640871Z mulu_check_10(int128):  passed! 🎉
+2022-05-30T19:53:41.6641266Z mul_check_6():  passed! 🎉
+2022-05-30T19:53:41.6641685Z from128x128(int256):  passed! 🎉
+2022-05-30T19:53:41.6642050Z abs_check_2():  passed! 🎉
+2022-05-30T19:53:41.6642532Z log_2_check_8(int128):  passed! 🎉
+2022-05-30T19:53:41.6642839Z add_check_2():  passed! 🎉
+2022-05-30T19:53:41.6643273Z gavg_check_10(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6643643Z div_check_4(int128):  passed! 🎉
+2022-05-30T19:53:41.6643955Z to128x128_check(int128):  passed! 🎉
+2022-05-30T19:53:41.6644329Z avg_check_6(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6644697Z neg_check(int128):  passed! 🎉
+2022-05-30T19:53:41.6645062Z gavg_check_12(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6645452Z gavg_check_9(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6645821Z divu_check_4(uint256):  passed! 🎉
+2022-05-30T19:53:41.6646131Z sqrt_check_6(int128):  passed! 🎉
+2022-05-30T19:53:41.6646525Z divu_check_15(uint256,uint256):  passed! 🎉
+2022-05-30T19:53:41.6647012Z mul_check_10(int128):  passed! 🎉
+2022-05-30T19:53:41.6647303Z divi_check_2():  passed! 🎉
+2022-05-30T19:53:41.6647647Z mul_check_2():  passed! 🎉
+2022-05-30T19:53:41.6648028Z gavg_check_5(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6648351Z avg_check_5(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6648757Z muli(int128,int256):  passed! 🎉
+2022-05-30T19:53:41.6649099Z fromInt(int256):  passed! 🎉
+2022-05-30T19:53:41.6649401Z mulu_check_4(int128):  passed! 🎉
+2022-05-30T19:53:41.6649775Z fromInt_check(int256):  passed! 🎉
+2022-05-30T19:53:41.6650174Z div_check_9(int128):  passed! 🎉
+2022-05-30T19:53:41.6650468Z sqrt(int128):  passed! 🎉
+2022-05-30T19:53:41.6650821Z to128x128_check_2(int128):  passed! 🎉
+2022-05-30T19:53:41.6651189Z exp_check_6(int128):  passed! 🎉
+2022-05-30T19:53:41.6651527Z divu_check_6():  passed! 🎉
+2022-05-30T19:53:41.6651850Z abs_check_4():  passed! 🎉
+2022-05-30T19:53:41.6652201Z add_check_3(int128):  passed! 🎉
+2022-05-30T19:53:41.6652577Z add_check_10(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6653053Z gavg_check_6(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6653431Z inv_check_6(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6653926Z gavg_check(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6654236Z mul_check_4(int128):  passed! 🎉
+2022-05-30T19:53:41.6654616Z gavg_check_7(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6654978Z divu_check_3(uint256): failed!💥  
+2022-05-30T19:53:41.6655216Z   Call sequence:
+2022-05-30T19:53:41.6655571Z     divu_check_3(115792089237316195423570985008687907853269984665640564039457583444963176218625)
+2022-05-30T19:53:41.6655770Z 
+2022-05-30T19:53:41.6655949Z Event sequence: Panic(1), merror Revert 0x from: Test
+2022-05-30T19:53:41.6656464Z exp_check_8():  passed! 🎉
+2022-05-30T19:53:41.6656818Z divu_check_5():  passed! 🎉
+2022-05-30T19:53:41.6657575Z muli_check_4(int128,int256,int128):  passed! 🎉
+2022-05-30T19:53:41.6657965Z div_check_8():  passed! 🎉
+2022-05-30T19:53:41.6658289Z gavg_check_2(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6658659Z muli_check_7():  passed! 🎉
+2022-05-30T19:53:41.6659397Z gavg_check_4(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6659778Z inv_check_8(int128):  passed! 🎉
+2022-05-30T19:53:41.6660343Z log_2_check_2(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6661096Z inv(int128):  passed! 🎉
+2022-05-30T19:53:41.6661425Z gavg_check_13(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6661831Z neg_check_10():  passed! 🎉
+2022-05-30T19:53:41.6662409Z log_2_check(int128):  passed! 🎉
+2022-05-30T19:53:41.6662706Z mul_check_8():  passed! 🎉
+2022-05-30T19:53:41.6663070Z avg_check_7(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6663614Z toUInt_check(int128):  passed! 🎉
+2022-05-30T19:53:41.6664094Z inv_check(int128):  passed! 🎉
+2022-05-30T19:53:41.6664537Z add_check_7(int128):  passed! 🎉
+2022-05-30T19:53:41.6664901Z div_check_12(int128):  passed! 🎉
+2022-05-30T19:53:41.6665211Z divi_check_3(int256):  passed! 🎉
+2022-05-30T19:53:41.6665562Z divu_check_10():  passed! 🎉
+2022-05-30T19:53:41.6665961Z mulu_check_6():  passed! 🎉
+2022-05-30T19:53:41.6666287Z toInt_check(int128):  passed! 🎉
+2022-05-30T19:53:41.6666805Z divu_check_18(uint256,uint256,uint256):  passed! 🎉
+2022-05-30T19:53:41.6667362Z log_2_check_7(int128):  passed! 🎉
+2022-05-30T19:53:41.6667698Z div_check_19(int128,int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6668172Z divu_check_16(uint256,uint256,uint256):  passed! 🎉
+2022-05-30T19:53:41.6668539Z toInt(int128):  passed! 🎉
+2022-05-30T19:53:41.6668873Z add_check_4():  passed! 🎉
+2022-05-30T19:53:41.6669157Z divi_check_6():  passed! 🎉
+2022-05-30T19:53:41.6669540Z muli_check_11():  passed! 🎉
+2022-05-30T19:53:41.6670109Z exp_2_check_6(int128):  passed! 🎉
+2022-05-30T19:53:41.6670408Z div_check_2():  passed! 🎉
+2022-05-30T19:53:41.6671170Z sub(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6671549Z sub_check_2():  passed! 🎉
+2022-05-30T19:53:41.6671879Z muli_check_5(int256):  passed! 🎉
+2022-05-30T19:53:41.6672513Z muli_check(int128,int256):  passed! 🎉
+2022-05-30T19:53:41.6672898Z add_check_5():  passed! 🎉
+2022-05-30T19:53:41.6673234Z toUInt(int128):  passed! 🎉
+2022-05-30T19:53:41.6673827Z fromUInt(uint256):  passed! 🎉
+2022-05-30T19:53:41.6674798Z pow_check_3(int128,uint256,uint256):  passed! 🎉
+2022-05-30T19:53:41.6675151Z mulu_check(int128,uint256):  passed! 🎉
+2022-05-30T19:53:41.6675549Z add_check_8(int128,int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6675942Z pow(int128,uint256):  passed! 🎉
+2022-05-30T19:53:41.6676264Z from128x128_check(int256):  passed! 🎉
+2022-05-30T19:53:41.6676834Z exp(int128):  passed! 🎉
+2022-05-30T19:53:41.6677383Z divi_check_11(int256):  passed! 🎉
+2022-05-30T19:53:41.6678059Z mul(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6678453Z div_check_13(int128):  passed! 🎉
+2022-05-30T19:53:41.6678911Z divi_check_18(int256,int256,int256):  passed! 🎉
+2022-05-30T19:53:41.6679650Z sqrt_check_2(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6680064Z log_2_check_6(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6680479Z avg_check_8(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6681283Z abs_check_3():  passed! 🎉
+2022-05-30T19:53:41.6681587Z ln_check(int128):  passed! 🎉
+2022-05-30T19:53:41.6682187Z abs_check_5(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6698622Z ln_check_2(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6699092Z sub_check(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6699595Z sub_check_8(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6700005Z avg_check(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6700315Z div_check_3():  passed! 🎉
+2022-05-30T19:53:41.6700779Z exp_2_check_4(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6701214Z muli_check_12(int128,int256):  passed! 🎉
+2022-05-30T19:53:41.6701736Z fromUInt_check(uint256):  passed! 🎉
+2022-05-30T19:53:41.6702149Z neg_check_5(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6702544Z ln_check_3(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6702921Z pow_check_4(int128,uint256,uint256):  passed! 🎉
+2022-05-30T19:53:41.6703351Z mulu_check_8():  passed! 🎉
+2022-05-30T19:53:41.6703818Z exp_2_check_5(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6704173Z muli_check_10(int128):  passed! 🎉
+2022-05-30T19:53:41.6704906Z divu_check_13():  passed! 🎉
+2022-05-30T19:53:41.6705437Z add_check_6():  passed! 🎉
+2022-05-30T19:53:41.6705862Z neg_check_8(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6706167Z sub_check_7():  passed! 🎉
+2022-05-30T19:53:41.6708001Z sqrt_check(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6708350Z ln(int128):  passed! 🎉
+2022-05-30T19:53:41.6708812Z div_check_6():  passed! 🎉
+2022-05-30T19:53:41.6709252Z ln_check_8(int128):  passed! 🎉
+2022-05-30T19:53:41.6709798Z from128x128_check_2(int256):  passed! 🎉
+2022-05-30T19:53:41.6710113Z debug(string,int128):  passed! 🎉
+2022-05-30T19:53:41.6710465Z exp_check(int128):  passed! 🎉
+2022-05-30T19:53:41.6710853Z exp_check_7(int128):  passed! 🎉
+2022-05-30T19:53:41.6711198Z log_2_check_3(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6711730Z muli_check_6():  passed! 🎉
+2022-05-30T19:53:41.6712290Z sqrt_check_3(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6712638Z divi_check_4(int256):  passed! 🎉
+2022-05-30T19:53:41.6713416Z inv_check_4():  passed! 🎉
+2022-05-30T19:53:41.6713839Z div_check_10(int128):  passed! 🎉
+2022-05-30T19:53:41.6838247Z avg_check_4(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6839106Z abs(int128):  passed! 🎉
+2022-05-30T19:53:41.6839902Z mulu_check_11():  passed! 🎉
+2022-05-30T19:53:41.6840440Z divu_check():  passed! 🎉
+2022-05-30T19:53:41.6840989Z divi_check_7():  passed! 🎉
+2022-05-30T19:53:41.6841462Z abs_check_6(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6842047Z exp_2_check_7():  passed! 🎉
+2022-05-30T19:53:41.6843264Z divi_check():  passed! 🎉
+2022-05-30T19:53:41.6843633Z mulu_check_12(int128,uint256):  passed! 🎉
+2022-05-30T19:53:41.6844065Z div_check_16(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6844547Z pow_check_7(int128,uint256):  passed! 🎉
+2022-05-30T19:53:41.6844910Z neg_check_7(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6845290Z sub_check_3():  passed! 🎉
+2022-05-30T19:53:41.6845698Z ln_check_4(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6846082Z sqrt_check_5(int128):  passed! 🎉
+2022-05-30T19:53:41.6846512Z div_check_15():  passed! 🎉
+2022-05-30T19:53:41.6846914Z sub_check_9(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6847244Z to128x128(int128):  passed! 🎉
+2022-05-30T19:53:41.6847627Z inv_check_5():  passed! 🎉
+2022-05-30T19:53:41.6848001Z neg_check_3(int128):  passed! 🎉
+2022-05-30T19:53:41.6848365Z sub_check_6():  passed! 🎉
+2022-05-30T19:53:41.6848726Z add_check():  passed! 🎉
+2022-05-30T19:53:41.6849153Z mulu_check_9(uint256):  passed! 🎉
+2022-05-30T19:53:41.6849504Z fromUInt_check_2(uint256):  passed! 🎉
+2022-05-30T19:53:41.6849887Z divi_check_5():  passed! 🎉
+2022-05-30T19:53:41.6850319Z mulu(int128,uint256):  passed! 🎉
+2022-05-30T19:53:41.6850655Z divu_check_12(uint256):  passed! 🎉
+2022-05-30T19:53:41.6851043Z muli_check_2():  passed! 🎉
+2022-05-30T19:53:41.6851444Z exp_2_check_2(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6851851Z divu_check_17(uint256,uint256,uint256):  passed! 🎉
+2022-05-30T19:53:41.6852547Z div_check(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6852967Z gavg(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6853338Z mul_check_11():  passed! 🎉
+2022-05-30T19:53:41.6853647Z exp_2(int128):  passed! 🎉
+2022-05-30T19:53:41.6854081Z divu(uint256,uint256):  passed! 🎉
+2022-05-30T19:53:41.6854685Z gavg_check_14(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6855041Z divu_check_9(uint256):  passed! 🎉
+2022-05-30T19:53:41.6855457Z sub_check_10(int128,int128):  passed! 🎉
+2022-05-30T19:53:41.6855860Z AssertionFailed(..):  passed! 🎉
+2022-05-30T19:53:41.6856011Z 
+2022-05-30T19:53:41.6856202Z Unique instructions: 35933
+2022-05-30T19:53:41.6856566Z Unique codehashes: 1
+2022-05-30T19:53:41.6856864Z Corpus size: 171
+2022-05-30T19:53:41.6857103Z Seed: 4141667936302715567
+2022-05-30T19:53:42.3891092Z ##[group]Run crytic/echidna-action@v1
+2022-05-30T19:53:42.3891399Z with:
+2022-05-30T19:53:42.3891652Z   files: tests/solidity/basic/multi-abi.sol
+2022-05-30T19:53:42.3891923Z   contract: B
+2022-05-30T19:53:42.3892145Z   multi-abi: true
+2022-05-30T19:53:42.3892378Z   solc-version: 0.7.6
+2022-05-30T19:53:42.3892607Z   negate-exit-status: 1
+2022-05-30T19:53:42.3892848Z ##[endgroup]
+2022-05-30T19:53:42.3902741Z ##[command]/usr/bin/docker run --name df67997e5d16a410fbd2c326d363bbbe5_b70ddb --label 08450d --workdir /github/workspace --rm -e INPUT_FILES -e INPUT_CONTRACT -e INPUT_MULTI-ABI -e INPUT_SOLC-VERSION -e INPUT_NEGATE-EXIT-STATUS -e INPUT_CONFIG -e INPUT_FORMAT -e INPUT_CORPUS-DIR -e INPUT_CHECK-ASSERTS -e INPUT_TEST-LIMIT -e INPUT_SHRINK-LIMIT -e INPUT_SEQ-LEN -e INPUT_CONTRACT-ADDR -e INPUT_DEPLOYER -e INPUT_SENDER -e INPUT_SEED -e INPUT_CRYTIC-ARGS -e INPUT_SOLC-ARGS -e HOME -e GITHUB_JOB -e GITHUB_REF -e GITHUB_SHA -e GITHUB_REPOSITORY -e GITHUB_REPOSITORY_OWNER -e GITHUB_RUN_ID -e GITHUB_RUN_NUMBER -e GITHUB_RETENTION_DAYS -e GITHUB_RUN_ATTEMPT -e GITHUB_ACTOR -e GITHUB_WORKFLOW -e GITHUB_HEAD_REF -e GITHUB_BASE_REF -e GITHUB_EVENT_NAME -e GITHUB_SERVER_URL -e GITHUB_API_URL -e GITHUB_GRAPHQL_URL -e GITHUB_REF_NAME -e GITHUB_REF_PROTECTED -e GITHUB_REF_TYPE -e GITHUB_WORKSPACE -e GITHUB_ACTION -e GITHUB_EVENT_PATH -e GITHUB_ACTION_REPOSITORY -e GITHUB_ACTION_REF -e GITHUB_PATH -e GITHUB_ENV -e GITHUB_STEP_SUMMARY -e RUNNER_OS -e RUNNER_ARCH -e RUNNER_NAME -e RUNNER_TOOL_CACHE -e RUNNER_TEMP -e RUNNER_WORKSPACE -e ACTIONS_RUNTIME_URL -e ACTIONS_RUNTIME_TOKEN -e ACTIONS_CACHE_URL -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" -v "/home/runner/work/_temp/_runner_file_commands":"/github/file_commands" -v "/home/runner/work/EchidnaTEST2/EchidnaTEST2":"/github/workspace" 08450d:f67997e5d16a410fbd2c326d363bbbe5
+2022-05-30T19:53:43.8728420Z Installing '0.7.6'...
+2022-05-30T19:53:43.8728741Z Version '0.7.6' installed.
+2022-05-30T19:53:43.9672196Z Switched global version to 0.7.6
+2022-05-30T19:53:43.9755797Z echidna-test tests/solidity/basic/multi-abi.sol --contract B --multi-abi
+2022-05-30T19:53:45.1650157Z Analyzing contract: /github/workspace/tests/solidity/basic/multi-abi.sol:B
+2022-05-30T19:53:45.1650596Z echidna_test: failed!💥  
+2022-05-30T19:53:45.1650800Z   Call sequence:
+2022-05-30T19:53:45.1650973Z     trigger_bug()
+2022-05-30T19:53:45.1651089Z 
+2022-05-30T19:53:45.1651094Z 
+2022-05-30T19:53:45.1651099Z 
+2022-05-30T19:53:45.1651374Z Unique instructions: 131
+2022-05-30T19:53:45.1651584Z Unique codehashes: 2
+2022-05-30T19:53:45.1651768Z Corpus size: 1
+2022-05-30T19:53:45.1652017Z Seed: -2299707577581290889
+2022-05-30T19:53:45.3360666Z Post job cleanup.
+2022-05-30T19:53:45.6351397Z [command]/usr/bin/git version
+2022-05-30T19:53:45.6409944Z git version 2.36.1
+2022-05-30T19:53:45.6462744Z Temporarily overriding HOME='/home/runner/work/_temp/e2cb3eb0-4110-4d01-b9f0-bf2e682fbf49' before making global git config changes
+2022-05-30T19:53:45.6463634Z Adding repository directory to the temporary git global config as a safe directory
+2022-05-30T19:53:45.6471519Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/EchidnaTEST2/EchidnaTEST2
+2022-05-30T19:53:45.6532004Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2022-05-30T19:53:45.6575163Z [command]/usr/bin/git submodule foreach --recursive git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :
+2022-05-30T19:53:45.6871716Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2022-05-30T19:53:45.6910196Z http.https://github.com/.extraheader
+2022-05-30T19:53:45.6975410Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2022-05-30T19:53:45.7025287Z [command]/usr/bin/git submodule foreach --recursive git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :
+2022-05-30T19:53:45.7653664Z Cleaning up orphan processes

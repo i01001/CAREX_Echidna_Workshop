@@ -1,0 +1,68 @@
+2022-05-30T19:18:36.6931689Z ##[group]Build container for action use: '/home/runner/work/_actions/crytic/echidna-action/v1/Dockerfile'.
+2022-05-30T19:18:36.7017239Z ##[command]/usr/bin/docker build -t 08450d:f67997e5d16a410fbd2c326d363bbbe5 -f "/home/runner/work/_actions/crytic/echidna-action/v1/Dockerfile" "/home/runner/work/_actions/crytic/echidna-action/v1"
+2022-05-30T19:18:37.0139297Z Sending build context to Docker daemon  45.57kB
+2022-05-30T19:18:37.0139669Z 
+2022-05-30T19:18:37.0938484Z Step 1/5 : FROM trailofbits/echidna
+2022-05-30T19:18:37.9161148Z latest: Pulling from trailofbits/echidna
+2022-05-30T19:18:37.9175300Z 40dd5be53814: Already exists
+2022-05-30T19:18:37.9224879Z 25431f339957: Pulling fs layer
+2022-05-30T19:18:37.9227133Z 3e3a97aa9f12: Pulling fs layer
+2022-05-30T19:18:37.9231586Z a241154f4980: Pulling fs layer
+2022-05-30T19:18:37.9238126Z e988e27a2c7c: Pulling fs layer
+2022-05-30T19:18:37.9238644Z 8eae24a292bb: Pulling fs layer
+2022-05-30T19:18:37.9238968Z 77fe46141b93: Pulling fs layer
+2022-05-30T19:18:37.9239645Z 2df8e57d36fa: Pulling fs layer
+2022-05-30T19:18:37.9240296Z ab486d97e0c8: Pulling fs layer
+2022-05-30T19:18:37.9241070Z e988e27a2c7c: Waiting
+2022-05-30T19:18:37.9241480Z 8eae24a292bb: Waiting
+2022-05-30T19:18:37.9241746Z 77fe46141b93: Waiting
+2022-05-30T19:18:37.9242219Z 2df8e57d36fa: Waiting
+2022-05-30T19:18:37.9243044Z ab486d97e0c8: Waiting
+2022-05-30T19:18:38.1434404Z 3e3a97aa9f12: Verifying Checksum
+2022-05-30T19:18:38.1435143Z 3e3a97aa9f12: Download complete
+2022-05-30T19:18:38.2789102Z 25431f339957: Verifying Checksum
+2022-05-30T19:18:38.2789654Z 25431f339957: Download complete
+2022-05-30T19:18:38.3908272Z e988e27a2c7c: Verifying Checksum
+2022-05-30T19:18:38.3921821Z e988e27a2c7c: Download complete
+2022-05-30T19:18:38.5695025Z 8eae24a292bb: Verifying Checksum
+2022-05-30T19:18:38.5703781Z 8eae24a292bb: Download complete
+2022-05-30T19:18:38.6907389Z 77fe46141b93: Verifying Checksum
+2022-05-30T19:18:38.6908646Z 77fe46141b93: Download complete
+2022-05-30T19:18:38.9218856Z 2df8e57d36fa: Verifying Checksum
+2022-05-30T19:18:38.9232793Z 2df8e57d36fa: Download complete
+2022-05-30T19:18:38.9967524Z ab486d97e0c8: Verifying Checksum
+2022-05-30T19:18:38.9968203Z ab486d97e0c8: Download complete
+2022-05-30T19:18:39.7403406Z 25431f339957: Pull complete
+2022-05-30T19:18:39.9418896Z 3e3a97aa9f12: Pull complete
+2022-05-30T19:18:42.8417415Z a241154f4980: Verifying Checksum
+2022-05-30T19:18:42.8418628Z a241154f4980: Download complete
+2022-05-30T19:18:53.1313079Z a241154f4980: Pull complete
+2022-05-30T19:18:53.2041301Z e988e27a2c7c: Pull complete
+2022-05-30T19:18:53.3478442Z 8eae24a292bb: Pull complete
+2022-05-30T19:18:53.5035337Z 77fe46141b93: Pull complete
+2022-05-30T19:18:53.9185400Z 2df8e57d36fa: Pull complete
+2022-05-30T19:18:54.0468403Z ab486d97e0c8: Pull complete
+2022-05-30T19:18:54.0538920Z Digest: sha256:7901e20c4fa72df4afce5e467f8926d42770588e79da7ecb01b2f05cb44bb35f
+2022-05-30T19:18:54.0572790Z Status: Downloaded newer image for trailofbits/echidna:latest
+2022-05-30T19:18:54.0593341Z  ---> 691250b23de9
+2022-05-30T19:18:54.0593761Z Step 2/5 : RUN pip3 install solc-select
+2022-05-30T19:18:54.0979035Z  ---> Running in 4eb87801cdae
+2022-05-30T19:18:55.6383271Z Collecting solc-select
+2022-05-30T19:18:55.8317636Z   Downloading https://files.pythonhosted.org/packages/97/1c/0d8b9de658943abb549fff2256fd5f64a7d459799230f84afc9a6ae65ae1/solc_select-0.2.1-py3-none-any.whl
+2022-05-30T19:18:55.8446625Z Installing collected packages: solc-select
+2022-05-30T19:18:55.8550671Z Successfully installed solc-select-0.2.1
+2022-05-30T19:18:57.5918179Z Removing intermediate container 4eb87801cdae
+2022-05-30T19:18:57.5918621Z  ---> 22c2a1f229fc
+2022-05-30T19:18:57.5919242Z Step 3/5 : COPY entrypoint.sh /entrypoint.sh
+2022-05-30T19:18:58.6490336Z  ---> bb9f9812136d
+2022-05-30T19:18:58.6490946Z Step 4/5 : RUN chmod ugo+x /entrypoint.sh
+2022-05-30T19:18:58.6751932Z  ---> Running in 123a3adf13e7
+2022-05-30T19:19:00.1622460Z Removing intermediate container 123a3adf13e7
+2022-05-30T19:19:00.1623143Z  ---> a96927144f36
+2022-05-30T19:19:00.1623668Z Step 5/5 : ENTRYPOINT ["/entrypoint.sh"]
+2022-05-30T19:19:00.1927262Z  ---> Running in 9e3230b44ddd
+2022-05-30T19:19:01.2118629Z Removing intermediate container 9e3230b44ddd
+2022-05-30T19:19:01.2119071Z  ---> a7adc2d30ad8
+2022-05-30T19:19:01.2157335Z Successfully built a7adc2d30ad8
+2022-05-30T19:19:01.2181437Z Successfully tagged 08450d:f67997e5d16a410fbd2c326d363bbbe5
+2022-05-30T19:19:01.2221360Z ##[endgroup]
